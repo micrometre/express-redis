@@ -14,6 +14,7 @@ app.get('/store/:key', async (req, res) => {
 app.get('/:key', async (req, res) => {
   const { key } = req.params;
   const rawData = await redisClient.getAsync(key);
+  console.log( process.env.REDIS_URL)
   return res.json(JSON.parse(rawData));
 });
 

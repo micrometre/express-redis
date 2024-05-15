@@ -1,18 +1,10 @@
 .PHONY: run
-flask:
-	flask --app flaskalpr run -h 0.0.0.0 --debug --reload
-flask_db_init:
-	flask --app flaskalpr init-db
-wait:
-	waitress-serve  --port=5000 --call 'flaskalpr:create_app'	
-
 clean: 
 	rm -rf flaskalpr/static/alprd1_images/
 	mkdir flaskalpr/static/alprd1_images
 
 start:
 	docker-compose up -d 
-
 stop:
 	docker-compose down 
 

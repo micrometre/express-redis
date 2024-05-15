@@ -4,10 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "Hugo Di Francesco",
+  "author": "micrometreuk",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
